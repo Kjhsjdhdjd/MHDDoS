@@ -50,7 +50,7 @@ jobs:
       - name: Run L7 Ping Test
         if: github.event.inputs.layer == 'L7'
         run: |
-          python3 start.py ${{ github.event.inputs.method }} '${{ github.event.inputs.target }}' 0 ${{ github.event.inputs.threads }} "http.txt" 999 ${{ github.event.inputs.duration }}
+          python3 start.py ${{ github.event.inputs.method }} '${{ github.event.inputs.target }}' 0 ${{ github.event.inputs.threads }} "http.txt" 999 ${{ github.event.inputs.duration }} True
 
       - name: Run L4 Ping Test
         if: github.event.inputs.layer == 'L4'
